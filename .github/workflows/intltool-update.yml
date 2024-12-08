@@ -9,5 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: sudo apt update -y && sudo apt install -y intltool-update
+      - run: sudo apt update -y && sudo apt install -y intltool
       - run: cd po && intltool-update -m
