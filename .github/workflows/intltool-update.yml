@@ -1,0 +1,13 @@
+name: intltool-update
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  intltool-update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt update -y && sudo apt install -y intltool-update
+      - run: cd po && intltool-update -m
